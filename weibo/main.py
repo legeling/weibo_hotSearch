@@ -10,6 +10,7 @@
 
 import requests
 from datetime import datetime
+from urllib.parse import quote
 
 def hot_search():
     url = 'https://weibo.com/ajax/side/hotSearch'
@@ -29,13 +30,14 @@ def main(num):
         title = rs['word']
         try:
             label = rs['label_name']
-            if label in ['新','爆']:
+            if label in ['新','爆','沸']:
                 label = label
             else:
                 label = ''
         except:
             label = ''
-        print(f"{i}. {title} {label}")
+        print(f"{i}. {title} {label} 链接：https://s.weibo.com/weibo?q={quote(title)}&Refer=top")
+        # print(f"{i}. {title} {label}")
 
 if __name__ == '__main__':
     num = 20 #获取热搜的数量
