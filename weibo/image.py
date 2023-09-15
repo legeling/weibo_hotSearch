@@ -31,7 +31,7 @@ def decoding(num):
         title = rs['word']
         try:
             label = rs['label_name']
-            if label in ['新','爆']:
+            if label in ['新','爆','沸']:
                 label = label
             else:
                 label = ''
@@ -51,7 +51,6 @@ def img(li,label):
     background_image = Image.open('resource/hot_research.jpg')  # 替换为你的背景图片
     background.paste(background_image, (0, 0))
 
-    # 创建一个空白图像
     line_height = 50  # 每行文字高度
     num_lines = len(li) # 总行数
     font_size = 30  # 字体大小
@@ -96,7 +95,7 @@ def img(li,label):
         print("保存失败！！！")
 
 if __name__ == "__main__":
-    num = 10 #获取热搜数
+    num = 20 #获取热搜数
     hot_li = decoding(num)[0]
     hot_label = decoding(num)[1]
     img(hot_li,hot_label)
