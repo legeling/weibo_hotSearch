@@ -351,7 +351,7 @@ def img(li, label):
     height = 350 + 70 + len(li) * 52
     background = Image.new('RGB', (width, height), color=(255, 255, 255))
     # 添加背景图片（如果需要替代顶部像素的背景）
-    background_image = Image.open('WeiboHotSearch/resource/hot_research.jpg')  # 替换为你的背景图片
+    background_image = Image.open('resource/hot_research.jpg')  # 替换为你的背景图片
     background.paste(background_image, (0, 0))
 
     line_height = 50  # 每行文字高度
