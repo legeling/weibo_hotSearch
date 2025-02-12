@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: UTF-8 -*-
 '''
-@Project ：Project Achive 
+@Project ：WeiboHotSearch
 @File    ：main.py
 @IDE     ：PyCharm 
 @Author  ：lingxiaotian
